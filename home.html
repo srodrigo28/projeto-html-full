@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Home</title>
+    <style>
+      .box{
+        gap: 20px;
+        display: flex;
+        height: 80vh;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-1{
+        display: block;
+        height: 50%;
+        width: 20%;
+      }
+      .box-2{
+        display: block;
+        height: 50%;
+        width: 20%;
+      }
+      .box-3{
+        display: block;
+        height: 50%;
+        width: 20%;
+      }
+      .box-4{
+        display: block;
+        height: 50%;
+        width: 28%;
+        background-color: #1c1c1c;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .alert{
+        width: 100%;
+        padding-top: -35px;
+      }
+      .box-4-historico{
+        flex-wrap: wrap;
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p{
+        width: 30px;
+        height: 30px;
+
+        margin: 5px;
+
+        cursor: pointer;
+
+        border-radius: 7px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #373737;
+      }
+      p:hover{
+        background-color: #c1c1c1;
+      }
+      .footer{
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      strong{
+        color: #fff;
+      }
+      button{
+        text-align: center;
+        margin-top: 10px;
+      }
+      h5{ color: #fff; margin-bottom: 25px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-menu position-fixed cima">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+              <a class="navbar-brand" href="#">FreteX</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      Cadastros
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./produtos.html">Produtos</a>
+                      <a class="dropdown-item" href="./clientes.html">Clientes</a>
+                      <a class="dropdown-item" href="./categoria.html">Categorias</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Usuários</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      Lista
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Produtos</a>
+                      <a class="dropdown-item" href="#">Clientes</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Usuários</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+          </nav>
+        </div>
+        <div class="box">
+          <div class="box-1">
+            <div class="alert alert-success text-center" role="alert">
+              Clientes
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Aline Sousa
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Wanessa Oliveira
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Silvana Nascimento
+              </li>
+            </ul>
+          </div>
+          <div class="box-2">
+            <div class="alert alert-success text-center" role="alert">
+              Usuários
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Andréia Cristina
+                <span class="badge badge-primary badge-pill">ADM</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Mateus Lima
+                <span class="badge badge-primary badge-pill ml-3">Suporte</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Roberto Oliveira
+                <span class="badge badge-primary badge-pill ml-3">Vendedor</span>
+              </li>
+            </ul>
+          </div>
+          <div class="box-3">
+            <div class="alert alert-success text-center" role="alert">
+              Produtos
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Monitor 29p
+                  <span class="badge badge-primary badge-pill">14</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Notebook Dell
+                  <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Computador Gamer
+                  <span class="badge badge-primary badge-pill ml-3">1</span>
+                </li>
+            </ul>
+          </div>
+          <div class="box-4">
+            <div class="">
+              <h5>Histórico</h5>
+            </div>
+            <div class="box-4-historico">
+              <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
+              <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
+              <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
+              <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p>
+            </div>
+            <div class="footer">
+              <strong>Jan</strong> <strong>Fev</strong> <strong>Mar</strong>
+              <strong>Abr</strong>  <strong>Mai</strong>  <strong>Jun</strong>
+            </div>
+            <button type="button" class="btn btn-dark"> Next </button>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

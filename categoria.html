@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Categoria</title>
+  <style>
+    .cima{
+      z-index: 99;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="container-menu position-fixed cima">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+              <a class="navbar-brand" href="#">FreteX</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      Cadastros
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Produtos</a>
+                      <a class="dropdown-item" href="./clientes.html">Clientes</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="./usuarios.html">Usuários</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      Lista
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./produtos.html">Produtos</a>
+                      <a class="dropdown-item" href="./clientes.html">Clientes</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Usuários</a>
+                    </div>
+                  </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+                </form>
+              </div>
+          </nav>
+        </div>
+        <br >
+        <form class="mt-5">
+          <div class="alert alert-success text-center" role="alert">
+            Cadastro de Categoria
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="nome">Nome categoria</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="descricao">Descrição</label>
+              <input type="text" class="form-control" id="descricao">
+            </div>
+          </div>
+
+          <button type="submit" onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
+
+          <a href="./home.html">
+            <button type="button" class="btn btn-danger">Cancelar</button>
+          </a>
+        </form>
+    </div>
+    <script>
+
+      let nome = document.querySelector('#nome')
+      let descricao = document.getElementById('descricao')
+
+      function cadastrar(){
+        console.log(nome.value)
+        console.log(descricao.value)
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
