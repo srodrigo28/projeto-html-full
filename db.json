@@ -14,6 +14,11 @@
         "nome": "games",
         "descricao": "marion, pokemon",
         "id": 3
+      },
+      {
+        "nome": "cursos",
+        "descricao": "Front-End",
+        "id": 3
       }
     ],
     "contas": [
