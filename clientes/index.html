@@ -2,22 +2,17 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <title>Categoria</title>
-  <style>
-    .cima{
-      z-index: 99;
-    }
-  </style>
+    <title>Cadastro de Clientes</title>
 </head>
 <body>
     <div class="container">
-
         <div class="container-menu position-fixed cima">
           <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-              <a class="navbar-brand" href="#">FreteX</a>
+              <a class="navbar-brand" href="./home.html">FreteX</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -34,8 +29,8 @@
                       Cadastros
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Produtos</a>
-                      <a class="dropdown-item" href="./clientes.html">Clientes</a>
+                      <a class="dropdown-item" href="./produtos.html">Produtos</a>
+                      <a class="dropdown-item" href="#">Clientes</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="./usuarios.html">Usuários</a>
                     </div>
@@ -45,14 +40,14 @@
                       Lista
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./produtos.html">Produtos</a>
-                      <a class="dropdown-item" href="./clientes.html">Clientes</a>
+                      <a class="dropdown-item" href="#">Produtos</a>
+                      <a class="dropdown-item" href="#">Clientes</a>
+                      <a class="dropdown-item" href="./categoria.html">Categorias</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#">Usuários</a>
                     </div>
                   </li>
                 </ul>
-
                 <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
@@ -60,52 +55,67 @@
               </div>
           </nav>
         </div>
-        <br >
+        <br>
         <form class="mt-5">
           <div class="alert alert-success text-center" role="alert">
-            Cadastro de Categoria
+            Cadastro de Clientes
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="nome">Nome categoria</label>
-              <input type="text" class="form-control" id="nome">
+              <label for="inputEmail4">Nome</label>
+              <input type="email" class="form-control" id="inputEmail4">
             </div>
             <div class="form-group col-md-6">
-              <label for="descricao">Descrição</label>
-              <input type="text" class="form-control" id="descricao">
+              <label for="inputPassword4">Sobre nome</label>
+              <input type="password" class="form-control" id="inputPassword4">
             </div>
           </div>
-
-          <button type="submit" onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
-
-          <a href="./home.html">
-            <button type="button" class="btn btn-danger">Cancelar</button>
-          </a>
+          <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputPassword3">Senha</label>
+              <input type="password" class="form-control" id="inputPassword3">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword5">Confirmar Senha</label>
+              <input type="password" class="form-control" id="inputPassword5">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Endereço:</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">Complemento</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputCity">Cidade</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputState">Estado</label>
+              <select id="inputState" class="form-control">
+                <option selected>Goiás</option>
+                <option>Brasília</option>
+                <option>São Paulo</option>
+                <option>Minas Gerais</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Cep</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="submit" class="btn btn-danger">Cancelar</button>
         </form>
     </div>
-    <script>
-
-      let nome = document.querySelector('#nome')
-      let descricao = document.getElementById('descricao')
-
-      function cadastrar(){
-
-        if( nome.value == "" ){
-          alert('Por favor preencher o campo nome')
-        }else if( descricao.value == "" ){
-          alert('Por favor preencher o campo descrição')
-        }
-
-        console.log(nome.value)
-        console.log(descricao.value)
-        
-        alert('Cadastrado com sucesso')
-
-
-      }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
