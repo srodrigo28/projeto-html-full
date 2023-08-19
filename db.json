@@ -1,0 +1,37 @@
+{
+    "categoria": [
+      {
+        "nome": "perifericos",
+        "descricao": "teclado computador",
+        "id": 1
+      },
+      {
+        "nome": "console",
+        "descricao": "ps1, ps2, ps3",
+        "id": 2
+      },
+      {
+        "nome": "games",
+        "descricao": "marion, pokemon",
+        "id": 3
+      }
+    ],
+    "contas": [
+      {
+        "descricao": "Energia Maio",
+        "valor": 190,
+        "id": 1
+      },
+      {
+        "descricao": "Internet",
+        "valor": 399,
+        "id": 2
+      }
+    ],
+    "lembrete": [
+      {"id": 1, "descricao": "pagar escola", "data": "20/02/2023"},
+      {"id": 2, "descricao": "pagar energia", "data": "20/02/2023"},
+      {"id": 3, "descricao": "pagar internet", "data": "20/02/2023"}
+    ]
+  }
+  
