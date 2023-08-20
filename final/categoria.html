@@ -61,22 +61,22 @@
           </nav>
         </div>
         <br >
-        <form class="mt-5">
+        <form class="mt-5" data-form>
           <div class="alert alert-success text-center" role="alert">
             Cadastro de Categoria
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="nome">Nome categoria</label>
-              <input type="text" class="form-control" id="nome">
+              <input type="text" class="form-control" id="nome" data-nome>
             </div>
             <div class="form-group col-md-6">
               <label for="descricao">Descrição</label>
-              <input type="text" class="form-control" id="descricao">
+              <input type="text" class="form-control" id="descricao" data-descricao>
             </div>
           </div>
 
-          <button type="submit" onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
 
           <a href="./home.html">
             <button type="button" class="btn btn-danger">Cancelar</button>
@@ -90,9 +90,7 @@
             <th class="text-center" scope="col">Descrição</th>
             <th class="text-center" scope="col">Controle</th>
           </thead>
-          <tbody data-tabela>
-
-          </tbody>
+          <tbody data-tabela> </tbody>
         </table>
     </div>
     <script>
@@ -119,7 +117,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./listaCategoria.js"></script>
+    <script type="module" src="./servico.js"></script>
 </body>
-
 </html>

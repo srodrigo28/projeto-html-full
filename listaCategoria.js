@@ -8,7 +8,7 @@ const criaNovaLinha = (id, nome, descricao) => {
             <td class="td" data-td> ${descricao} </td>
             <td class="text-center">
                 <a href="#"> 
-                    <button class="btn btn-warning" onclick='editar()'>
+                    <button class="btn btn-primary" onclick='editar()'>
                         Editar 
                     </button>
                 </a>
