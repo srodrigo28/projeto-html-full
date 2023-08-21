@@ -3,6 +3,7 @@ import { categoriaService } from "./controller.js";
 const tabela = document.querySelector('[data-tabela]')
 // const formCategoria = document.querySelector('[data-form')
 
+// INSERIR
 addEventListener('submit', (evento) => {
     const nome = evento.target.querySelector('[data-nome]').value
     const descricao = evento.target.querySelector('[data-descricao]').value
@@ -19,6 +20,7 @@ addEventListener('submit', (evento) => {
     // window.location.href = './categoria.html'
 })
 
+// CRIA LINHA
 const criaNovaLinha = (id, nome, descricao) => {
     const linhaNovaCliente = document.createElement('tr')
     const conteudo = `
@@ -26,16 +28,12 @@ const criaNovaLinha = (id, nome, descricao) => {
             <td class="td" data-td> ${nome}      </td>
             <td class="td" data-td> ${descricao} </td>
             <td class="text-center">
-                <a href="#"> 
-                    <button class="btn btn-primary" onclick='editar()'>
-                        Editar 
-                    </button>
+                <a href="./editar.html?id=${id}" class="btn btn-primary">
+                    Editar 
                 </a>
-                <a href="#"> 
-                    <button class="btn btn-danger" id="excluir" >
-                        Excluir
-                    </button>
-                </a>
+                <button class="btn btn-danger" id="excluir" >
+                    Excluir
+                </button>
             </td>
         `
     linhaNovaCliente.innerHTML = conteudo;
@@ -43,6 +41,7 @@ const criaNovaLinha = (id, nome, descricao) => {
     return linhaNovaCliente;
 }
 
+// LISTA
 categoriaService.listaCategoria()
 .then( data => {
     if(data < 1 ){
@@ -58,13 +57,13 @@ categoriaService.listaCategoria()
     }
 })
 
+// DELETE
 tabela.addEventListener('click', (evento) => {
     let ehExcluir = evento.target.id == 'excluir'
     if(ehExcluir){
         const linhaCategoria = evento.target.closest('[data-id]')
         let id = linhaCategoria.dataset.id
         categoriaService.removerCategoria(id)
-    }else{
-        alert('Não consegui excluir :( ')
     }
 })
+

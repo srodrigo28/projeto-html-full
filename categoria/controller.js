@@ -29,8 +29,33 @@ const removerCategoria = (id) => {
     })
 }
 
+const detalheCategoria = (id) => {
+    return fetch(`${baseUrl}/${id}`)
+    .then(resposta => {
+        return resposta.json()
+    })
+}
+
+const atualizaCategoria = (id, nome, descricao) => {
+    return fetch(`${baseUrl}/${id}`, {
+        method: 'PUT',
+        headers: {
+
+        },
+        body: JSON.stringify({
+            nome: nome,
+            descricao: descricao
+        })
+    })
+    .then( resposta => {
+        return resposta.json()
+    })
+}
+
 export const categoriaService = {
     listaCategoria,
     inserirCategoria,
-    removerCategoria
+    removerCategoria,
+    detalheCategoria,
+    atualizaCategoria
 }

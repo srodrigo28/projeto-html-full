@@ -1,5 +1,12 @@
 {
-  "categoria": [],
+  "categoria": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ],
   "contas": [
     {
       "descricao": "Energia Maio",
